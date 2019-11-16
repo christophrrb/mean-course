@@ -1,9 +1,12 @@
-                <!-- [property] se usa para acceder/modificar una propiedad de JavaScript. Esto funciona porque los elementos HTML son objectos en JavaScript con propiedades. -->
+<!-- Sin ngModel
+                    [property] se usa para acceder/modificar una propiedad de JavaScript. Esto funciona porque los elementos HTML son objectos en JavaScript con propiedades. -->
                 <!-- #name se usa para crear una referencia de un objeto en la página. -->
-<textarea rows="6" [value]="newPost" #postInput></textarea>
+<!-- <textarea rows="6" [value]="newPost" #postInput></textarea> -->
+
+<textarea rows="6" [value]="newPost" [(ngModel)]='enteredValue'></textarea>
 
 <hr>
     <!-- (event) ej. mousedown, mousedown, keyup, etc.-->
-<button (click)="onAddPost(postInput)">Save Post</button>
+<button (click)="onAddPost()">Save Post</button>
 
 <p>{{newPost}}</p>

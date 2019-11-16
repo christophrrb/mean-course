@@ -12,9 +12,9 @@ export class PostCreateComponent implements OnInit {
   enteredValue = "";
   X = 0;
 
-  onAddPost(postInput: HTMLTextAreaElement) {
+  onAddPost() {
     // console.dir(postInput);
-    this.newPost = postInput.value;
+    this.newPost = this.enteredValue;
   }
 
   constructor() { }
