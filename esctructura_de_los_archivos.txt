@@ -1,0 +1,13 @@
+- Previo Mandato para Abrir VSCODE /usr/share/code/code --no-sandbox --unity-launch %F
+
+- La carpeta node_modules se puede recrear con el mandato npm install porque inspecciona el archivo package.json para cuales
+archivos instalar.
+
+- Añadir un componente en app.module.ts en bootstrap: [AppComponent] deja que el componente se use en index.html. Sin hacerlo, los componentes sólo se pueden usar en otros componentes.
+
+- main.ts empieza la aplicación de Angular.
+    platformBrowserDynamic().bootstrapModule(AppModule)
+      .catch(err => console.error(err));
+
+Esta función se llama, y en bootstrapModule, le pasamos nuestro módulo, y en este caso está en (app.module.ts), y si hay un error da una notificación.
+
