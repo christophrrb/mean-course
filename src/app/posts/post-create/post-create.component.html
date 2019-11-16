@@ -3,10 +3,16 @@
                 <!-- #name se usa para crear una referencia de un objeto en la página. -->
 <!-- <textarea rows="6" [value]="newPost" #postInput></textarea> -->
 
-<textarea rows="6" [value]="newPost" [(ngModel)]='enteredValue'></textarea>
-
-<hr>
-    <!-- (event) ej. mousedown, mousedown, keyup, etc.-->
-<button (click)="onAddPost()">Save Post</button>
+<mat-card>
+	<mat-form-field>
+		<textarea matInput rows="6" [value]="newPost" [(ngModel)]='enteredValue'></textarea>
+	</mat-form-field>
+	
+	<!-- (event) ej. mousedown, mousedown, keyup, etc.-->
+	<button
+		mat-raised-button
+		color="accent"
+		(click)="onAddPost()">Save Post</button>
+</mat-card>
 
 <p>{{newPost}}</p>
